@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คู่มือการทำแบบละเอียด - Citrus Glow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Sarabun', sans-serif; background-color: #FAF7F2; color: #1E293B; }
+        
+        .nav-btn { transition: all 0.2s; border-radius: 10px; padding: 6px 14px; font-size: 14px; border: 2px solid transparent; }
+        .nav-active { border-color: #EA580C; background-color: #FFF7ED; font-weight: 700; color: #EA580C; }
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- Header Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-orange-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <span class="text-2xl">🍊</span>
+                <div>
+                    <h1 class="font-extrabold text-lg text-orange-600 leading-tight">Citrus Glow</h1>
+                    <p class="text-xs text-green-700 font-bold">สบู่เหลวล้างมือธรรมชาติจากเปลือกส้ม</p>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-1 font-medium text-gray-700">
+                <a href="index.html" class="nav-btn hover:bg-orange-50">ภาพรวม / คำนวณขยะ</a>
+                <a href="ingredients.html" class="nav-btn hover:bg-orange-50">ส่วนผสมและคุณสมบัติ</a>
+                <a href="process.html" class="nav-btn hover:bg-orange-50">กระบวนการผลิต</a>
+                <a href="standards.html" class="nav-btn hover:bg-orange-50">มาตรฐานชุมชน</a>
+                <a href="lab.html" class="nav-btn hover:bg-orange-50">ผลการทดลอง</a>
+                <a href="diy.html" class="nav-btn nav-active ml-2">📖 คู่มือการทำแบบละเอียด</a>
+            </nav>
+            <a href="index.html#order" class="bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold px-4 py-2 rounded-full transition shadow">
+                ขอรับตัวอย่างทดลอง
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 mt-8 space-y-10">
+
+        <!-- Banner Header -->
+        <div class="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 rounded-3xl p-8 md:p-10 text-white shadow-lg">
+            <span class="bg-white/25 text-sm px-4 py-1.5 rounded-full font-bold border border-white/40">Step-by-Step Guide</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold mt-4">คู่มือการทำสบู่เหลวเปลือกส้มแบบละเอียด</h2>
+            <p class="text-orange-100 text-base md:text-lg mt-2">สูตรอัตราส่วนมาตรฐานชุมชน ระบุปริมาณหน่วยกรัม (g) ชัดเจน ทำตามได้ง่ายที่บ้าน</p>
+        </div>
+
+        <!-- Section 1: ส่วนผสมและวัตถุดิบ -->
+        <section class="bg-white p-8 rounded-3xl border border-orange-200 shadow-md space-y-6">
+            <h3 class="text-2xl font-bold text-gray-800 border-b border-orange-100 pb-3 flex items-center gap-2">
+                <span>🧪</span> วัตถุดิบและอัตราส่วน
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-base md:text-lg">
+                <div class="p-4 bg-orange-50 rounded-2xl border border-orange-100 flex justify-between items-center">
+                    <span class="font-bold text-gray-800">1. น้ำสกัดเปลือกส้มเข้มข้น</span>
+                    <span class="font-extrabold text-orange-600 bg-white px-3 py-1 rounded-xl border border-orange-200">500 g (กรัม)</span>
+                </div>
+                <div class="p-4 bg-orange-50 rounded-2xl border border-orange-100 flex justify-between items-center">
+                    <span class="font-bold text-gray-800">2. หัวเชื้อสบู่ N70</span>
+                    <span class="font-extrabold text-orange-600 bg-white px-3 py-1 rounded-xl border border-orange-200">250 g (กรัม)</span>
+                </div>
+                <div class="p-4 bg-orange-50 rounded-2xl border border-orange-100 flex justify-between items-center">
+                    <span class="font-bold text-gray-800">3. ผงข้น (เกลือบริสุทธิ์)</span>
+                    <span class="font-extrabold text-orange-600 bg-white px-3 py-1 rounded-xl border border-orange-200">50 g (กรัม)</span>
+                </div>
+                <div class="p-4 bg-orange-50 rounded-2xl border border-orange-100 flex justify-between items-center">
+                    <span class="font-bold text-gray-800">4. กลีเซอรีนพืช (เพิ่มความชุ่มชื้น)</span>
+                    <span class="font-extrabold text-orange-600 bg-white px-3 py-1 rounded-xl border border-orange-200">30 g (กรัม)</span>
+                </div>
+                <div class="p-4 bg-orange-50 rounded-2xl border border-orange-100 flex justify-between items-center">
+                    <span class="font-bold text-gray-800">5. ผงฟอง</span>
+                    <span class="font-extrabold text-orange-600 bg-white px-3 py-1 rounded-xl border border-orange-200">20 g (กรัม)</span>
+                </div>
+                <div class="p-4 bg-orange-50 rounded-2xl border border-orange-100 flex justify-between items-center">
+                    <span class="font-bold text-gray-800">6. น้ำสะอาดต้มสุก</span>
+                    <span class="font-extrabold text-orange-600 bg-white px-3 py-1 rounded-xl border border-orange-200">150 g (กรัม)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: ขั้นตอนการทำ -->
+        <section class="bg-white p-8 rounded-3xl border border-orange-200 shadow-md space-y-8">
+            <h3 class="text-2xl font-bold text-gray-800 border-b border-orange-100 pb-3 flex items-center gap-2">
+                <span>📝</span> ขั้นตอนการผลิตสบู่เหลว
+            </h3>
+                <div class="space-y-6 text-base md:text-lg text-gray-700">
+                <div class="p-6 bg-amber-50/50 rounded-2xl border border-amber-200 space-y-2">
+                    <h4 class="text-xl font-bold text-orange-600">ขั้นตอนที่ 1: ขจัดสิ่งปนเปื้อนและคัดสรรวัตถุดิบคุณภาพ</h4>
+                    <p class="leading-relaxed">
+                        เริ่มต้นจากการคัดเลือกเปลือกส้มสดไร้รอยเน่าเสียนำมาล้างทำความสะอาดด้วย <strong>น้ำเกลือ</strong> เป็นเวลา 15 นาที เพื่อขจัดคราบสิ่งสกปรกและยากำจัดศัตรูพืชที่ติดอยู่บนผิวเปลือกส้มออกให้หมด จากนั้นล้างด้วยน้ำสะอาดสะพัดให้แห้งสะเด็ดน้ำ
+                    </p>
+                </div>
+                <div class="p-6 bg-amber-50/50 rounded-2xl border border-amber-200 space-y-2">
+                    <h4 class="text-xl font-bold text-orange-600">ขั้นตอนที่ 2: การเตรียมน้ำสกัดเปลือกส้ม</h4>
+                    <p class="leading-relaxed">
+                       หั่นเปลือกส้มเป็นชิ้นเล็กๆ แล้วต้มกับน้ำสะอาดที่อุณหภูมิ 80-90°C เป็นเวลา 30 นาที และนำมากรองด้วยผ้าขาวบางเพื่อเอาเศษกากออก พักน้ำต้มไว้ให้เย็นลงจนเท่าอุณหภูมิห้อง
+                    </p>
+                </div>
+
+                <div class="p-6 bg-amber-50/50 rounded-2xl border border-amber-200 space-y-2">
+                    <h4 class="text-xl font-bold text-orange-600">ขั้นตอนที่ 3: การกวนเบสหัวเชื้อ</h4>
+                    <p class="leading-relaxed">
+                        ตักหัวเชื้อ N70 ปริมาณ 250 g ใส่ลงในภาชนะผสม จากนั้นทยอยใส่ผงข้น 50 g ลงไปอย่างช้าๆ ใช้ไม้พายกวนผสมวนไปใน <strong>(ทิศทางเดียวกันเท่านั้น)</strong> จนกระทั่งเนื้อหัวเชื้อเริ่มเปลี่ยนเป็นสีขาวข้นเนียน
+                    </p>
+                </div>
+
+                <div class="p-6 bg-amber-50/50 rounded-2xl border border-amber-200 space-y-2">
+                    <h4 class="text-xl font-bold text-orange-600">ขั้นตอนที่ 4: การผสมสารสกัดและสารบำรุง</h4>
+                    <p class="leading-relaxed">
+                        เทน้ำสกัดเปลือกส้มที่เย็นแล้วปริมาณ 500 g ค่อยๆ ใส่ลงในภาชนะผสมทีละน้อย พร้อมกวนอย่างเบามือ จากนั้นเติมกลีเซอรีนพืช 30 g, ผงฟอง 20 g และน้ำสะอาดต้มสุกส่วนที่เหลือ 150 g กวนต่อจนส่วนผสมทั้งหมดละลายเข้ากันดี
+                    </p>
+                </div>
+
+                <div class="p-6 bg-green-50/60 rounded-2xl border border-green-300 space-y-2">
+                    <h4 class="text-xl font-bold text-green-700">ขั้นตอนที่ 5: การพักสบู่ ตรวจวัดค่า pH และบรรจุ</h4>
+                    <p class="leading-relaxed">
+                        ปิดฝาภาชนะผสมให้มิดชิด พักทิ้งไว้ประมาณ 12 - 24 ชั่วโมง เพื่อให้ฟองอากาศยุบตัวจนหมด เนื้อสบู่จะกลายเป็นสีส้มอำพันใส สุ่มทดสอบค่า pH ให้ได้ช่วงสมดุลผิว 5.5 ก่อนนำไปบรรจุลงในขวดปั๊มเพื่อใช้งาน
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

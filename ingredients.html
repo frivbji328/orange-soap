@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ส่วนผสมและคุณสมบัติ - Citrus Glow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Sarabun', sans-serif; background-color: #FAF7F2; color: #1E293B; }
+        
+        .nav-btn { transition: all 0.2s; border-radius: 10px; padding: 6px 14px; font-size: 14px; border: 2px solid transparent; }
+        .nav-active { border-color: #EA580C; background-color: #FFF7ED; font-weight: 700; color: #EA580C; }
+        
+        .ingredient-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .ingredient-card:hover { transform: translateY(-3px); }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; }
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- Header Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-orange-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <span class="text-2xl">🍊</span>
+                <div>
+                    <h1 class="font-extrabold text-lg text-orange-600 leading-tight">Citrus Glow</h1>
+                    <p class="text-xs text-green-700 font-bold">สบู่เหลวล้างมือธรรมชาติจากเปลือกส้ม</p>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-1 font-medium text-gray-700">
+                <a href="index.html" class="nav-btn hover:bg-orange-50">ภาพรวม / คำนวณขยะ</a>
+                <a href="ingredients.html" class="nav-btn nav-active">ส่วนผสมและคุณสมบัติ</a>
+                <a href="process.html" class="nav-btn hover:bg-orange-50">กระบวนการผลิต</a>
+                <a href="standards.html" class="nav-btn hover:bg-orange-50">มาตรฐานชุมชน</a>
+                <a href="lab.html" class="nav-btn hover:bg-orange-50">ผลการทดลอง</a>
+                <a href="diy.html" class="bg-amber-100 text-orange-900 hover:bg-amber-200 px-3 py-1.5 rounded-xl text-xs font-bold transition border border-orange-300 flex items-center gap-1 ml-2">📖 คู่มือการทำแบบละเอียด</a>
+            </nav>
+
+            <a href="index.html#order" class="bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold px-4 py-2 rounded-full transition shadow">
+                ขอรับตัวอย่างทดลอง
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 mt-8 space-y-16">
+
+        <!-- Banner Header -->
+        <div class="text-center space-y-3">
+            <span class="bg-orange-100 text-orange-800 text-xs md:text-sm font-extrabold px-4 py-1.5 rounded-full uppercase tracking-wider">Natural Formulation</span>
+            <h2 class="text-3xl md:text-4xl font-black text-gray-800">เจาะลึกส่วนผสมและคุณสมบัติทางวิทยาศาสตร์</h2>
+            <p class="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">คัดสรรวัตถุดิบธรรมชาติผสานพลังสารสกัดเปลือกส้มเข้มข้น เพื่อสบู่ล้างมือทำความสะอาดล้ำลึก ถนอมผิวมือ</p>
+        </div>
+
+        <!-- SECTION 1: ส่วนผสมหลักในการผลิต (Ingredients Layout Like Process Page) -->
+        <section class="space-y-8">
+            <div class="border-b-2 border-orange-200 pb-3 flex items-center gap-3">
+                <span class="text-3xl">🧪</span>
+                <div>
+                    <h3 class="text-2xl font-black text-gray-800">1. วัตถุดิบและส่วนผสมหลัก (Ingredients)</h3>
+                    <p class="text-sm text-gray-500 font-medium">คัดสรรวัตถุดิบปลอดภัย ปราศจากสารเคมีกัดกร่อน</p>
+                </div>
+            </div>
+
+            <div class="space-y-8">
+
+                <!-- Ingredient 1 -->
+                <div class="ingredient-card bg-white rounded-3xl border border-orange-200 shadow-md overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-0">
+                    <div class="md:col-span-5 bg-orange-50 flex items-center justify-center p-4 border-b md:border-b-0 md:border-r border-orange-100 img-container min-h-[220px]">
+                        <img src="images/images.jpg" alt="เปลือกส้มสดธรรมชาติ" class="rounded-2xl shadow-sm object-cover w-full h-full">
+                    </div>
+                    <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="bg-orange-600 text-white text-xs font-extrabold px-3 py-1 rounded-full">สารสกัดหลัก</span>
+                            <span class="text-sm font-bold text-orange-600">500g ต่อการผลิต 1 ลิตร</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-3">เปลือกส้มสดธรรมชาติ (Fresh Orange Peels)</h4>
+                        <p class="text-base text-gray-700 leading-relaxed mb-4">
+                            วัตถุดิบหลักที่ได้จากการแปรรูปขยะเปลือกส้มในชุมชน ผ่านการต้มสกัดความร้อนเพื่อดึงน้ำมันหอมระเหย สาร d-Limonene และวิตามินซีเข้มข้น ออกมาทำหน้าที่เป็นสารทำความสะอาดและดับกลิ่นคาวธรรมชาติ
+                        </p>
+                        <div class="bg-orange-50 p-3 rounded-xl border border-orange-200 text-sm text-gray-800 font-medium">
+                            🌱 <strong>คุณประโยชน์:</strong> ให้กลิ่นหอมสดชื่น ดับกลิ่นคาวติดมืออย่างได้ผลโดยไม่พึ่งน้ำหอมสังเคราะห์
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ingredient 2 -->
+                <div class="ingredient-card bg-white rounded-3xl border border-orange-200 shadow-md overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-0">
+                    <div class="md:col-span-5 bg-orange-50 flex items-center justify-center p-4 border-b md:border-b-0 md:border-r border-orange-100 img-container min-h-[220px]">
+                        <img src="images/6aaf7918d6884da53328c946ccec714e.png" alt="หัวเชื้อสบู่ N70 จากพืช" class="rounded-2xl shadow-sm object-cover w-full h-full">
+                    </div>
+                    <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="bg-amber-600 text-white text-xs font-extrabold px-3 py-1 rounded-full">สารทำความสะอาด</span>
+                            <span class="text-sm font-bold text-amber-600">250g ต่อการผลิต 1 ลิตร</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-3">หัวเชื้อสบู่ N70</h4>
+                        <p class="text-base text-gray-700 leading-relaxed mb-4">
+                            สารทำความสะอาด มีประสิทธิภาพในการเข้าจับและทำลายคราบไขมัน คราบสิ่งสกปรกบนผิวมือ ให้ฟองนุ่มละเอียด ล้างออกง่าย ไม่ทิ้งสารตกค้างสะสม
+                        </p>
+                        <div class="bg-amber-50 p-3 rounded-xl border border-amber-200 text-sm text-gray-800 font-medium">
+                            🌱 <strong>คุณประโยชน์:</strong> สร้างฟองสบู่ธรรมชาติ ขจัดคราบมัน คราบอาหาร ได้ดีเยี่ยม
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ingredient 3 -->
+                <div class="ingredient-card bg-white rounded-3xl border border-orange-200 shadow-md overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-0">
+                    <div class="md:col-span-5 bg-orange-50 flex items-center justify-center p-4 border-b md:border-b-0 md:border-r border-orange-100 img-container min-h-[220px]">
+                        <img src="images/d0jj0o.jpg" alt="กลีเซอรีนพืชบริสุทธิ์" class="rounded-2xl shadow-sm object-cover w-full h-full">
+                    </div>
+                    <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="bg-green-600 text-white text-xs font-extrabold px-3 py-1 rounded-full">สารบำรุงผิว</span>
+                            <span class="text-sm font-bold text-green-600">30g ต่อการผลิต 1 ลิตร</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-3">กลีเซอรีนพืชบริสุทธิ์ (Vegetable Glycerin)</h4>
+                        <p class="text-base text-gray-700 leading-relaxed mb-4">
+                            สารกักเก็บความชุ่มชื้นตามธรรมชาติ (Humectant) ทำหน้าที่ดึงดึงความชื้นเข้าสู่ผิวมือ ปกป้องเกราะป้องกันผิว ไม่ให้สูญเสียน้ำในขณะล้างมือ เหมาะอย่างยิ่งสำหรับคนที่ต้องล้างมือบ่อยๆ ตลอดวัน
+                        </p>
+                        <div class="bg-green-50 p-3 rounded-xl border border-green-200 text-sm text-gray-800 font-medium">
+                            🌱 <strong>คุณประโยชน์:</strong> ถนอมผิวมือให้นุ่มชุ่มชื้น ลดอาการมือแห้ง ลอก หรือตึงหลังล้างมือ
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ingredient 4 -->
+                <div class="ingredient-card bg-white rounded-3xl border border-orange-200 shadow-md overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-0">
+                    <div class="md:col-span-5 bg-orange-50 flex items-center justify-center p-4 border-b md:border-b-0 md:border-r border-orange-100 img-container min-h-[220px]">
+                        <img src="images/cc7tsn.jpg" alt="ผงข้นปรับสมดุล" class="rounded-2xl shadow-sm object-cover w-full h-full">
+                    </div>
+                    <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="bg-blue-600 text-white text-xs font-extrabold px-3 py-1 rounded-full">สารปรับความสมดุล</span>
+                            <span class="text-sm font-bold text-blue-600">50g ต่อการผลิต 1 ลิตร</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-800 mb-3">ผงข้นเกลือบริสุทธิ์ (Sodium Chloride)</h4>
+                        <p class="text-base text-gray-700 leading-relaxed mb-4">
+                            ทำหน้าที่ปรับระดับความหนืดของเนื้อสบู่เหลวล้างมือให้มีสัมผัสข้นพอดี ใช้งานง่าย ไม่เหลวเป็นน้ำจนเกินไป ช่วยให้กดใช้งานจากขวดหัวปั๊มได้อย่างสะดวกสบาย
+                        </p>
+                        <div class="bg-blue-50 p-3 rounded-xl border border-blue-200 text-sm text-gray-800 font-medium">
+                            🌱 <strong>คุณประโยชน์:</strong> ช่วยเพิ่มความหนืดและคงสภาพเนื้อสบู่ให้สม่ำเสมอ
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 2: คุณสมบัติทางวิทยาศาสตร์ (Properties Section) -->
+        <section class="space-y-8">
+            <div class="border-b-2 border-orange-200 pb-3 flex items-center gap-3">
+                <span class="text-3xl">✨</span>
+                <div>
+                    <h3 class="text-2xl font-black text-gray-800">2. คุณสมบัติทางวิทยาศาสตร์ (Properties & Benefits)</h3>
+                    <p class="text-sm text-gray-500 font-medium">กลไกการทำงานของสารสำคัญเพื่อการล้างมือที่มีประสิทธิภาพ</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Feature Card 1 -->
+                <div class="bg-white p-6 rounded-3xl border border-orange-200 shadow-sm space-y-4">
+                    <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center text-3xl font-extrabold">
+                        🦠
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800">ยับยั้งแบคทีเรียด้วย d-Limonene</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        สาร d-Limonene ธรรมชาติในเปลือกส้ม มีฤทธิ์ขัดขวางเยื่อหุ้มเซลล์ของเชื้อแบคทีเรียและเชื้อรา ทำลายเชื้อโรคบนผิวมือได้อย่างปลอดภัย โดยไม่ก่อให้เกิดการดื้อยาเหมือนสารเคมีสังเคราะห์
+                    </p>
+                    <span class="inline-block bg-orange-50 text-orange-700 text-xs font-bold px-3 py-1 rounded-lg">ทำความสะอาดล้ำลึก</span>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="bg-white p-6 rounded-3xl border border-orange-200 shadow-sm space-y-4">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-3xl font-extrabold">
+                        🐟
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800">ขจัดคราบมัน & ดับกลิ่นคาว</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        โมเลกุลน้ำมันหอมระเหยเปลือกส้มมีโครงสร้างจับตัวกับคราบไขมันและโมเลกุลกลิ่นคาว (เช่น กลิ่นคาวปลา กลิ่นกระเทียม) แล้วล้างออกด้วยน้ำได้อย่างรวดเร็ว ทิ้งไว้เพียงกลิ่นหอมสดชื่น
+                    </p>
+                    <span class="inline-block bg-amber-50 text-amber-700 text-xs font-bold px-3 py-1 rounded-lg">ขจัดกลิ่นติดมือ 100%</span>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="bg-white p-6 rounded-3xl border border-orange-200 shadow-sm space-y-4">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-3xl font-extrabold">
+                        ⚖️
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-800">ค่า pH 5.5 สมดุลผิวมือ</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        ควบคุมความเป็นกรด-ด่างให้อยู่ที่ pH 5.5 ซึ่งเป็นค่ากรดอ่อนๆ ตามธรรมชาติของผิวมือ ช่วยรักษาสมดุลเกราะป้องกันผิว (Acid Mantle) ล้างมือได้บ่อยเท่าที่ต้องการ โดยไม่ระคายเคือง
+                    </p>
+                    <span class="inline-block bg-green-50 text-green-700 text-xs font-bold px-3 py-1 rounded-lg">อ่อนโยนต่อผิวมือ</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Bottom CTA -->
+        <div class="bg-gradient-to-r from-orange-500 to-amber-500 rounded-3xl p-8 text-white text-center space-y-4 shadow-lg">
+            <h4 class="text-2xl font-bold">อยากทราบขั้นตอนการสกัดเปลือกส้มและกวนสบู่?</h4>
+            <p class="text-orange-100 text-base max-w-xl mx-auto">รับชมขั้นตอนกระบวนการผลิตสบู่เหลวล้างมือแบบอย่างละเอียดได้เลย</p>
+            <a href="process.html" class="inline-block bg-white text-orange-600 hover:bg-orange-50 font-extrabold px-8 py-3 rounded-2xl transition shadow">
+                ไปที่หน้ากระบวนการผลิต →
+            </a>
+        </div>
+
+    </main>
+
+</body>
+</html>

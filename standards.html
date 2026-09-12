@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>มาตรฐานชุมชน - Citrus Glow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Sarabun', sans-serif; background-color: #FAF7F2; color: #1E293B; }
+        .nav-btn { transition: all 0.2s; border-radius: 10px; padding: 6px 14px; font-size: 14px; border: 2px solid transparent; }
+        .nav-active { border-color: #EA580C; background-color: #FFF7ED; font-weight: 700; color: #EA580C; }
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- Header Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-orange-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <span class="text-2xl">🍊</span>
+                <div>
+                    <h1 class="font-extrabold text-lg text-orange-600 leading-tight">Citrus Glow</h1>
+                    <p class="text-xs text-green-700 font-bold">สบู่เหลวล้างมือธรรมชาติจากเปลือกส้ม</p>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-1 font-medium text-gray-700">
+                <a href="index.html" class="nav-btn hover:bg-orange-50">ภาพรวม / คำนวณขยะ</a>
+                <a href="ingredients.html" class="nav-btn hover:bg-orange-50">ส่วนผสมและคุณสมบัติ</a>
+                <a href="process.html" class="nav-btn hover:bg-orange-50">กระบวนการผลิต</a>
+                <a href="standards.html" class="nav-btn nav-active">มาตรฐานชุมชน</a>
+                <a href="lab.html" class="nav-btn hover:bg-orange-50">ผลการทดลอง</a>
+                <a href="diy.html" class="bg-amber-100 text-orange-900 hover:bg-amber-200 px-3 py-1.5 rounded-xl text-xs font-bold transition border border-orange-300 flex items-center gap-1 ml-2">📖 คู่มือการทำแบบละเอียด</a>
+            </nav>
+
+            <a href="index.html#order" class="bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold px-4 py-2 rounded-full transition shadow">
+                ขอรับตัวอย่างทดลอง
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 mt-8 space-y-8">
+        <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-orange-100">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-10">
+                
+                <!-- Left Icon Card -->
+                <div class="w-full md:w-1/3 text-center p-8 bg-orange-50 rounded-3xl border border-orange-100">
+                    <span class="text-7xl">🏡</span>
+                    <h4 class="font-extrabold text-gray-800 text-xl mt-4">วิสาหกิจชุมชนกลุ่มแปรรูปเกษตร</h4>
+                    <p class="text-sm text-green-700 font-bold mt-2">สร้างรายได้คืนสู่เกษตรกรท้องถิ่น</p>
+                </div>
+
+                <!-- Right Description Area -->
+                <div class="w-full md:w-2/3 space-y-5">
+                    <span class="bg-orange-100 text-orange-800 text-xs md:text-sm font-extrabold px-4 py-1.5 rounded-full uppercase tracking-wider">Certified Local Quality</span>
+                    
+                    <h3 class="text-3xl md:text-4xl font-black text-gray-800 leading-tight">
+                        ได้รับการรับรองมาตรฐานและสนับสนุนจากชุมชน
+                    </h3>
+                    
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed font-normal">
+                        ผลิตภัณฑ์ Citrus Glow Soap เกิดจากการรวมกลุ่มของเกษตรกรผู้ปลูกส้มในพื้นที่ เพื่อแก้ไขปัญหาผลผลิตส้มตกต่ำและขยะเปลือกส้มเน่าเสีย โดยร่วมมือกับสถาบันวิจัยในท้องถิ่นในการพัฒนาสูตรจนได้รับการรับรองมาตรฐานผลิตภัณฑ์ชุมชน (มผช.)
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-3 pt-3">
+                        <span class="bg-amber-100 text-amber-900 text-sm font-bold px-5 py-2.5 rounded-2xl border border-amber-300 shadow-sm">
+                            ✓ มผช. (มาตรฐานผลิตภัณฑ์ชุมชน)
+                        </span>
+                        <span class="bg-green-100 text-green-900 text-sm font-bold px-5 py-2.5 rounded-2xl border border-green-300 shadow-sm">
+                            ✓ สินค้า OTOP ระดับดาว
+                        </span>
+                        <span class="bg-blue-100 text-blue-900 text-sm font-bold px-5 py-2.5 rounded-2xl border border-blue-300 shadow-sm">
+                            ✓ ตราชีวภาพ ปลอดภัย 100%
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

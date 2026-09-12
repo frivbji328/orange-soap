@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ผลการทดลอง - Citrus Glow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Sarabun', sans-serif; background-color: #FAF7F2; color: #2C3E50; }
+        .chart-container { position: relative; width: 100%; max-width: 450px; margin: auto; height: 260px; }
+        .nav-btn { transition: all 0.2s; border-radius: 8px; padding: 6px 12px; font-size: 14px; }
+        .nav-active { border: 2px solid #EA580C; background-color: #FFF7ED; font-weight: 700; color: #EA580C; }
+    </style>
+</head>
+<body class="pb-12">
+
+    <!-- Header Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-orange-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <span class="text-3xl">🍊</span>
+                <div>
+                    <h1 class="font-bold text-xl text-orange-600 leading-tight">Citrus Glow</h1>
+                    <p class="text-xs text-green-700 font-semibold">สบู่เหลวล้างมือธรรมชาติจากเปลือกส้ม</p>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-2 font-medium text-gray-700">
+                <a href="index.html" class="nav-btn hover:bg-orange-50">ภาพรวม / คำนวณขยะ</a>
+                <a href="ingredients.html" class="nav-btn hover:bg-orange-50">ส่วนผสมและคุณสมบัติ</a>
+                <a href="process.html" class="nav-btn hover:bg-orange-50">กระบวนการผลิต</a>
+                <a href="standards.html" class="nav-btn hover:bg-orange-50">มาตรฐานชุมชน</a>
+                <a href="lab.html" class="nav-btn nav-active">ผลการทดลอง</a>
+                <a href="diy.html" class="bg-amber-100 text-orange-800 hover:bg-amber-200 px-3 py-1.5 rounded-xl text-xs font-bold transition border border-orange-200 flex items-center gap-1">📖 คู่มือการทำแบบละเอียด</a>
+            </nav>
+
+            <a href="index.html#order" class="bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold px-4 py-2 rounded-full transition shadow-sm">
+                ขอรับตัวอย่างทดลอง
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 mt-8 space-y-8">
+        <div class="text-center max-w-xl mx-auto mb-6">
+            <span class="text-xs font-bold text-orange-600 bg-orange-100 px-3 py-1 rounded-full">Laboratory & Analytics</span>
+            <h2 class="text-3xl font-bold text-gray-800 mt-3">ผลการวิเคราะห์ทางห้องปฏิบัติการ</h2>
+            <p class="text-xs text-gray-500 mt-1">ยืนยันคุณภาพด้วยผลการทดสอบประสิทธิภาพการยับยั้งเชื้อและการสำรวจความพึงพอใจ</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-orange-100">
+                <h4 class="font-bold text-gray-800 text-base mb-4">🧪 ประสิทธิภาพการยับยั้งแบคทีเรีย (%)</h4>
+                <div class="chart-container">
+                    <canvas id="bacterialChart"></canvas>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-orange-100">
+                <h4 class="font-bold text-gray-800 text-base mb-4">⭐ สรุปผลความพึงพอใจของผู้ใช้งาน (100 คน)</h4>
+                <div class="chart-container">
+                    <canvas id="satisfactionChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Init Lab Charts
+        const ctxBar = document.getElementById('bacterialChart').getContext('2d');
+        new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: ['สบู่ทั่วไป', 'สารสกัดเปลือกส้ม 5%', 'Citrus Glow Soap'],
+                datasets: [{
+                    label: 'การยับยั้งแบคทีเรีย (%)',
+                    data: [65.0, 88.5, 99.8],
+                    backgroundColor: ['#CBD5E1', '#FDBA74', '#EA580C'],
+                    borderRadius: 6
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+        });
+
+        const ctxDoughnut = document.getElementById('satisfactionChart').getContext('2d');
+        new Chart(ctxDoughnut, {
+            type: 'doughnut',
+            data: {
+                labels: ['พึงพอใจมากที่สุด', 'พึงพอใจ', 'ปานกลาง'],
+                datasets: [{
+                    data: [78, 17, 5],
+                    backgroundColor: ['#16A34A', '#F59E0B', '#CBD5E1']
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+    </script>
+</body>
+</html>
