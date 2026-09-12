@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>คู่มือการทำแบบละเอียด - Citrus Glow</title>
+    <title>กระบวนการผลิตอย่างละเอียด - Citrus Glow</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap');
-        body { font-family: 'Sarabun', sans-serif; background-color: #FAF7F2; color: #1E293B; }
-        
-        .nav-btn { transition: all 0.2s; border-radius: 10px; padding: 6px 14px; font-size: 14px; border: 2px solid transparent; }
-        .nav-active { border-color: #EA580C; background-color: #FFF7ED; font-weight: 700; color: #EA580C; }
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Sarabun', sans-serif; background-color: #FAF7F2; color: #2C3E50; }
+        .chart-container { position: relative; width: 100%; max-width: 450px; margin: auto; height: 260px; }
+        .nav-btn { transition: all 0.2s; border-radius: 8px; padding: 6px 12px; font-size: 14px; }
+        .nav-active { border: 2px solid #EA580C; background-color: #FFF7ED; font-weight: 700; color: #EA580C; }
     </style>
 </head>
 <body class="pb-20">
@@ -25,13 +25,14 @@
                     <p class="text-xs text-green-700 font-bold">สบู่เหลวล้างมือจากเปลือกส้ม</p>
                 </div>
             </a>
+            
             <nav class="hidden md:flex items-center gap-1 font-medium text-gray-700">
-                <a href="index.html" class="nav-btn hover:bg-orange-50">ภาพรวม / คำนวณขยะ</a>
+                <a href="index.html" class="nav-btn nav-active">ภาพรวม / คำนวณขยะ</a>
                 <a href="ingredients.html" class="nav-btn hover:bg-orange-50">ส่วนผสมและคุณสมบัติ</a>
                 <a href="process.html" class="nav-btn hover:bg-orange-50">กระบวนการผลิต</a>
                 <a href="standards.html" class="nav-btn hover:bg-orange-50">มาตรฐานชุมชน</a>
                 <a href="lab.html" class="nav-btn hover:bg-orange-50">ผลการทดลอง</a>
-                <a href="diy.html" class="nav-btn nav-active ml-2">📖 คู่มือการทำแบบละเอียด</a>
+                <a href="diy.html" class="bg-amber-100 text-orange-900 hover:bg-amber-200 px-3 py-1.5 rounded-xl text-xs font-bold transition border border-orange-300 flex items-center gap-1 ml-2">📖 คู่มือการทำแบบละเอียด</a>
             </nav>
             <a href="index.html#order" class="bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold px-4 py-2 rounded-full transition shadow">
                 ขอรับตัวอย่างทดลอง
@@ -40,91 +41,160 @@
     </header>
 
     <main class="max-w-5xl mx-auto px-4 mt-8 space-y-10">
+        <!-- Section 1: Hero Banner -->
+        <section class="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 rounded-3xl p-8 text-white shadow-lg relative overflow-hidden">
+            <div class="max-w-2xl relative z-10">
+                <span class="bg-white/20 text-xs px-3 py-1 rounded-full uppercase tracking-wider font-semibold backdrop-blur-sm">BCG Economy & Zero Waste Innovation</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-2 leading-snug">เปลี่ยนขยะเปลือกส้มชุมชน สู่นวัตกรรมดูแลผิวพรรณ</h2>
+                <p class="text-orange-100 text-sm md:text-base mb-6">สบู่เหลวชีวภาพจากสารสกัดเปลือกส้มธรรมชาติ อุดมด้วย d-limonene ยับยั้งแบคทีเรีย ย่อยสลายได้ตามธรรมชาติ 100% พร้อมสร้างรายได้คืนสู่กลุ่มเกษตรกร</p>
+            </div>
 
-        <!-- Banner Header -->
-        <div class="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 rounded-3xl p-8 md:p-10 text-white shadow-lg">
-            <span class="bg-white/25 text-sm px-4 py-1.5 rounded-full font-bold border border-white/40">Step-by-Step Guide</span>
-            <h2 class="text-3xl md:text-4xl font-extrabold mt-4">คู่มือการทำสบู่เหลวเปลือกส้มแบบละเอียด</h2>
-            <p class="text-orange-100 text-base md:text-lg mt-2">สูตรอัตราส่วนมาตรฐานชุมชน ระบุปริมาณหน่วยกรัม (g) ชัดเจน ทำตามได้ง่ายที่บ้าน</p>
-        </div>
+            <!-- Highlight Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 mt-4 text-center">
+                <div>
+                    <div class="text-2xl md:text-3xl font-extrabold">99.8%</div>
+                    <div class="text-xs text-orange-100">ยับยั้งแบคทีเรียสะสม</div>
+                </div>
+                <div>
+                    <div class="text-2xl md:text-3xl font-extrabold">2.5 kg</div>
+                    <div class="text-xs text-orange-100">ลด CO2e / เปลือกส้ม 1 kg</div>
+                </div>
+                <div>
+                    <div class="text-2xl md:text-3xl font-extrabold">pH 5.5</div>
+                    <div class="text-xs text-orange-100">สมดุลอ่อนโยนต่อผิว</div>
+                </div>
+                <div>
+                    <div class="text-2xl md:text-3xl font-extrabold">100%</div>
+                    <div class="text-xs text-orange-100">ส่วนผสมย่อยสลายได้</div>
+                </div>
+            </div>
+        </section>
+        <!-- Product Cards -->
+        <section class="space-y-6">
+            <div class="text-center">
+                <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">ผลิตภัณฑ์ทำความสะอาดมือ Citrus Glow</h3>
+                <p class="text-gray-600 text-base mt-1">คัดสรรวัตถุดิบธรรมชาติ ใส่ใจทุกขั้นตอนการผลิต</p>
+            </div>
 
-        <!-- Section 1: ส่วนผสมและวัตถุดิบ -->
-        <section class="bg-white p-8 rounded-3xl border border-orange-200 shadow-md space-y-6">
-            <h3 class="text-2xl font-bold text-gray-800 border-b border-orange-100 pb-3 flex items-center gap-2">
-                <span>🧪</span> วัตถุดิบและอัตราส่วน
-            </h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-base md:text-lg">
-                <div class="p-4 bg-orange-50 rounded-2xl border border-orange-100 flex justify-between items-center">
-                    <span class="font-bold text-gray-800">1. น้ำสกัดเปลือกส้มเข้มข้น</span>
-                    <span class="font-extrabold text-orange-600 bg-white px-3 py-1 rounded-xl border border-orange-200">500 g (กรัม)</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card 1: สรรพคุณเด่น -->
+                <div class="bg-white p-8 rounded-3xl border-2 border-orange-200 shadow-md space-y-4">
+                    <div class="flex items-center gap-3 border-b border-orange-100 pb-4">
+                        <span class="text-4xl">✨</span>
+                        <div>
+                            <h4 class="text-2xl font-bold text-orange-600">สรรพคุณ</h4>
+                            <p class="text-sm text-gray-500 font-medium">พลังบำรุงและทำความสะอาดจากธรรมชาติ</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-base md:text-lg text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-orange-500 font-bold">✔</span>
+                            <span><strong>ยับยั้งแบคทีเรีย & ขจัดคราบมัน:</strong> สาร d-Limonene ในเปลือกส้มช่วยทำความสะอาดผิวมือ ล้างคราบคาวอาหารและสิ่งสกปรก</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-orange-500 font-bold">✔</span>
+                            <span><strong>ดับกลิ่นคาวติดมือ:</strong> กลิ่นหอมสดชื่นจากน้ำมันหอมระเหยเปลือกส้ม ช่วยดับกลิ่นคาวอาหารหรือสิ่งสกปรกได้อย่างดีเยี่ยม</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-orange-500 font-bold">✔</span>
+                            <span><strong>มือถนอมนุ่ม ไม่แห้งตึง:</strong> อุดมด้วยกลีเซอรีนพืช ไม่ทำให้ผิวแห้งตึงหลังล้างมือ</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="p-4 bg-orange-50 rounded-2xl border border-orange-100 flex justify-between items-center">
-                    <span class="font-bold text-gray-800">2. หัวเชื้อสบู่ N70</span>
-                    <span class="font-extrabold text-orange-600 bg-white px-3 py-1 rounded-xl border border-orange-200">250 g (กรัม)</span>
+
+                <!-- Card 2: วัตถุดิบหลัก -->
+                <div class="bg-white p-8 rounded-3xl border-2 border-orange-200 shadow-md space-y-4">
+                    <div class="flex items-center gap-3 border-b border-orange-100 pb-4">
+                        <span class="text-4xl">🌿</span>
+                        <div>
+                            <h4 class="text-2xl font-bold text-orange-600">วัตถุดิบหลักในการผลิต</h4>
+                            <p class="text-sm text-gray-500 font-medium">ส่วนประกอบปลอดภัย ผ่านมาตรฐาน</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-base md:text-lg text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-600 font-bold">🌱</span>
+                            <span><strong>น้ำสกัดเปลือกส้มเข้มข้น:</strong> วัตถุดิบหลัก 500 g ต่อชุดผลิต</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-600 font-bold">🌱</span>
+                            <span><strong>หัวเชื้อสบู่ N70 จากพืช:</strong> สารทำความสะอาดชนิดอ่อนโยน 250 g</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-600 font-bold">🌱</span>
+                            <span><strong>ผงข้นบริสุทธิ์ & กลีเซอรีนพืช:</strong> ช่วยปรับความหนืดและกักเก็บความชุ่มชื้น</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="p-4 bg-orange-50 rounded-2xl border border-orange-100 flex justify-between items-center">
-                    <span class="font-bold text-gray-800">3. ผงข้น (เกลือบริสุทธิ์)</span>
-                    <span class="font-extrabold text-orange-600 bg-white px-3 py-1 rounded-xl border border-orange-200">50 g (กรัม)</span>
+            </div>
+        </section>
+        <!-- Section 2: Biomass Impact Calculator (ส่วนชูคำนวณขยะ) -->
+        <section class="bg-gradient-to-br from-amber-500 to-orange-600 text-white border border-amber-200 rounded-3xl p-6 md:p-8 shadow-md">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-3xl p-2 bg-white/20 rounded-2xl">🌱</span>
+                <div>
+                    <h3 class="font-bold text-xl text-white">เครื่องคำนวณผลกระทบการลดขยะชีวมวล (Impact Calculator)</h3>
+                    <p class="text-xs text-orange-100">คำนวณว่าเปลือกส้มของคุณ สามารถช่วยลดขยะและก๊าซเรือนกระจกได้มากเท่าไหร่</p>
                 </div>
-                <div class="p-4 bg-orange-50 rounded-2xl border border-orange-100 flex justify-between items-center">
-                    <span class="font-bold text-gray-800">4. กลีเซอรีนพืช (เพิ่มความชุ่มชื้น)</span>
-                    <span class="font-extrabold text-orange-600 bg-white px-3 py-1 rounded-xl border border-orange-200">30 g (กรัม)</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                <!-- Input Box -->
+                <div class="bg-white p-5 rounded-2xl text-gray-800 shadow-sm">
+                    <label class="block text-xs font-bold text-gray-700 mb-2">ปริมาณเปลือกส้มที่คุณมี (กก./สัปดาห์):</label>
+                    <input type="number" id="peelInput" value="5" min="1" class="w-full bg-orange-50 border border-orange-200 rounded-xl px-4 py-3 text-2xl font-black text-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <p class="text-[11px] text-gray-400 mt-2">*คำนวณจากอัตราการสกัดและสัดส่วนน้ำหมักชีวภาพมาตรฐาน</p>
                 </div>
-                <div class="p-4 bg-orange-50 rounded-2xl border border-orange-100 flex justify-between items-center">
-                    <span class="font-bold text-gray-800">5. ผงฟอง</span>
-                    <span class="font-extrabold text-orange-600 bg-white px-3 py-1 rounded-xl border border-orange-200">20 g (กรัม)</span>
-                </div>
-                <div class="p-4 bg-orange-50 rounded-2xl border border-orange-100 flex justify-between items-center">
-                    <span class="font-bold text-gray-800">6. น้ำสะอาดต้มสุก</span>
-                    <span class="font-extrabold text-orange-600 bg-white px-3 py-1 rounded-xl border border-orange-200">150 g (กรัม)</span>
+
+                <!-- Result Highlights -->
+                <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 text-center">
+                        <div class="text-xs text-orange-100">ลดคาร์บอนฟุตพริ้นท์/ปี</div>
+                        <div id="co2Output" class="text-3xl font-black text-green-300 my-1">650 kgCO2e</div>
+                        <div class="text-[10px] text-orange-200">เทียบเท่าปลูกต้นไม้ 65 ต้น</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 text-center">
+                        <div class="text-xs text-orange-100">ลดขยะเปลือกส้ม/ปี</div>
+                        <div id="wasteOutput" class="text-3xl font-black text-yellow-300 my-1">260 kg</div>
+                        <div class="text-[10px] text-orange-200">หมุนเวียนขยะสู่ประโยชน์</div>
+                    </div>
+                        <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 text-center">
+                        <div class="text-xs text-orange-100">ผลิตสบู่เหลว (250ml)</div>
+                        <div id="soapOutput" class="text-3xl font-black text-white my-1">10 ขวด</div>
+                        <div class="text-[10px] text-orange-200">แทนการใช้น้ำยาเคมี</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 2: ขั้นตอนการทำ -->
-        <section class="bg-white p-8 rounded-3xl border border-orange-200 shadow-md space-y-8">
-            <h3 class="text-2xl font-bold text-gray-800 border-b border-orange-100 pb-3 flex items-center gap-2">
-                <span>📝</span> ขั้นตอนการผลิตสบู่เหลว
-            </h3>
-                <div class="space-y-6 text-base md:text-lg text-gray-700">
-                <div class="p-6 bg-amber-50/50 rounded-2xl border border-amber-200 space-y-2">
-                    <h4 class="text-xl font-bold text-orange-600">ขั้นตอนที่ 1: ขจัดสิ่งปนเปื้อนและคัดสรรวัตถุดิบคุณภาพ</h4>
-                    <p class="leading-relaxed">
-                        เริ่มต้นจากการคัดเลือกเปลือกส้มสดไร้รอยเน่าเสียนำมาล้างทำความสะอาดด้วย <strong>น้ำเกลือ</strong> เป็นเวลา 15 นาที เพื่อขจัดคราบสิ่งสกปรกและยากำจัดศัตรูพืชที่ติดอยู่บนผิวเปลือกส้มออกให้หมด จากนั้นล้างด้วยน้ำสะอาดสะพัดให้แห้งสะเด็ดน้ำ
-                    </p>
-                </div>
-                <div class="p-6 bg-amber-50/50 rounded-2xl border border-amber-200 space-y-2">
-                    <h4 class="text-xl font-bold text-orange-600">ขั้นตอนที่ 2: การเตรียมน้ำสกัดเปลือกส้ม</h4>
-                    <p class="leading-relaxed">
-                       หั่นเปลือกส้มเป็นชิ้นเล็กๆ แล้วต้มกับน้ำสะอาดที่อุณหภูมิ 80-90°C เป็นเวลา 30 นาที และนำมากรองด้วยผ้าขาวบางเพื่อเอาเศษกากออก พักน้ำต้มไว้ให้เย็นลงจนเท่าอุณหภูมิห้อง
-                    </p>
-                </div>
-
-                <div class="p-6 bg-amber-50/50 rounded-2xl border border-amber-200 space-y-2">
-                    <h4 class="text-xl font-bold text-orange-600">ขั้นตอนที่ 3: การกวนเบสหัวเชื้อ</h4>
-                    <p class="leading-relaxed">
-                        ตักหัวเชื้อ N70 ปริมาณ 250 g ใส่ลงในภาชนะผสม จากนั้นทยอยใส่ผงข้น 50 g ลงไปอย่างช้าๆ ใช้ไม้พายกวนผสมวนไปใน <strong>(ทิศทางเดียวกันเท่านั้น)</strong> จนกระทั่งเนื้อหัวเชื้อเริ่มเปลี่ยนเป็นสีขาวข้นเนียน
-                    </p>
-                </div>
-
-                <div class="p-6 bg-amber-50/50 rounded-2xl border border-amber-200 space-y-2">
-                    <h4 class="text-xl font-bold text-orange-600">ขั้นตอนที่ 4: การผสมสารสกัดและสารบำรุง</h4>
-                    <p class="leading-relaxed">
-                        เทน้ำสกัดเปลือกส้มที่เย็นแล้วปริมาณ 500 g ค่อยๆ ใส่ลงในภาชนะผสมทีละน้อย พร้อมกวนอย่างเบามือ จากนั้นเติมกลีเซอรีนพืช 30 g, ผงฟอง 20 g และน้ำสะอาดต้มสุกส่วนที่เหลือ 150 g กวนต่อจนส่วนผสมทั้งหมดละลายเข้ากันดี
-                    </p>
-                </div>
-
-                <div class="p-6 bg-green-50/60 rounded-2xl border border-green-300 space-y-2">
-                    <h4 class="text-xl font-bold text-green-700">ขั้นตอนที่ 5: การพักสบู่ ตรวจวัดค่า pH และบรรจุ</h4>
-                    <p class="leading-relaxed">
-                        ปิดฝาภาชนะผสมให้มิดชิด พักทิ้งไว้ประมาณ 12 - 24 ชั่วโมง เพื่อให้ฟองอากาศยุบตัวจนหมด เนื้อสบู่จะกลายเป็นสีส้มอำพันใส สุ่มทดสอบค่า pH ให้ได้ช่วงสมดุลผิว 5.5 ก่อนนำไปบรรจุลงในขวดปั๊มเพื่อใช้งาน
-                    </p>
-                </div>
-            </div>
+        <!-- Order Section -->
+        <section id="order" class="bg-white rounded-2xl p-6 shadow-sm border border-orange-100">
+            <h3 class="text-lg font-bold text-gray-800 mb-2">📩 สนใจรับตัวอย่างทดลอง / สนับสนุนผลิตภัณฑ์ชุมชน</h3>
+            <p class="text-xs text-gray-500 mb-4">กรอกข้อมูลด้านล่างเพื่อขอรับสบู่เหลวเปลือกส้มขนาดทดลองฟรี หรือติดต่อสั่งซื้อราคาส่ง</p>
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-4" onsubmit="event.preventDefault(); alert('ส่งข้อมูลคำขอเรียบร้อยแล้ว');">
+                <input type="text" placeholder="ชื่อ-นามสกุล" required class="bg-gray-50 border border-gray-200 rounded-lg p-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500">
+                <input type="email" placeholder="อีเมล" required class="bg-gray-50 border border-gray-200 rounded-lg p-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500">
+                <button type="submit" class="md:col-span-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold py-3 rounded-lg hover:opacity-95 transition shadow">ส่งข้อมูลคำขอ</button>
+            </form>
         </section>
 
     </main>
 
+    <script>
+        // Impact Calculator Script
+        const peelInput = document.getElementById('peelInput');
+        const soapOutput = document.getElementById('soapOutput');
+        const wasteOutput = document.getElementById('wasteOutput');
+        const co2Output = document.getElementById('co2Output');
+
+        peelInput.addEventListener('input', (e) => {
+            const val = parseFloat(e.target.value) || 0;
+            soapOutput.textContent = `${Math.round(val * 2)} ขวด`;
+            const yearlyWaste = Math.round(val * 52);
+            wasteOutput.textContent = `${yearlyWaste} kg`;
+            const yearlyCo2 = (yearlyWaste * 2.5).toFixed(0);
+            co2Output.textContent = `${yearlyCo2} kgCO2e`;
+        });
+    </script>
 </body>
 </html>
