@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>กระบวนการผลิตอย่างละเอียด - Citrus Glow</title>
+    <title>ผลการทดลอง - Citrus Glow</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap');
         body { font-family: 'Sarabun', sans-serif; background-color: #FAF7F2; color: #2C3E50; }
@@ -13,7 +14,8 @@
         .nav-active { border: 2px solid #EA580C; background-color: #FFF7ED; font-weight: 700; color: #EA580C; }
     </style>
 </head>
-<body class="pb-20">
+<body class="pb-12">
+
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-orange-100 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-3">
@@ -26,192 +28,67 @@
         <nav class="hidden md:flex items-center gap-1 font-medium text-gray-700">
             <a href="index.html" class="nav-btn hover:bg-orange-50">ภาพรวม / คำนวณขยะ</a>
             <a href="ingredients.html" class="nav-btn hover:bg-orange-50">ส่วนผสมและคุณสมบัติ</a>
-            <a href="process.html" class="nav-btn nav-active">กระบวนการผลิต</a>
+            <a href="process.html" class="nav-btn hover:bg-orange-50">กระบวนการผลิต</a>
             <a href="standards.html" class="nav-btn hover:bg-orange-50">มาตรฐานชุมชน</a>
-            <a href="lab.html" class="nav-btn hover:bg-orange-50">ผลการทดลอง</a>
+            <a href="lab.html" class="nav-btn nav-active">ผลการทดลอง</a>
             <a href="diy.html" class="bg-amber-100 text-orange-900 hover:bg-amber-200 px-3 py-1.5 rounded-xl text-xs font-bold transition border border-orange-300 flex items-center gap-1 ml-2">📖 คู่มือการทำแบบละเอียด</a>
         </nav>
         <a href="index.html#order" class="bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold px-4 py-2 rounded-full transition shadow">ขอรับตัวอย่างทดลอง</a>
     </div>
 </header>
-    <main class="max-w-6xl mx-auto px-4 mt-8 space-y-12">
-
-        <!-- Banner Header -->
-        <div class="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 rounded-3xl p-8 md:p-10 text-white shadow-lg relative overflow-hidden">
-            <div class="max-w-3xl relative z-10">
-                <span class="bg-white/25 text-sm px-4 py-1.5 rounded-full font-bold border border-white/40 tracking-wide">Zero Waste Bio-Extraction</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold mt-4 leading-tight">กระบวนการผลิตสบู่เหลวเปลือกส้มอย่างละเอียด</h2>
-                <p class="text-orange-100 text-base md:text-lg mt-3 leading-relaxed">
-                    ผสานภูมิปัญญาท้องถิ่นเข้ากับวิทยาศาสตร์การสกัดสารบริสุทธิ์ ทุกขั้นตอนผ่านการควบคุมคุณภาพ ปลอดเคมีอันตราย และย่อยสลายได้ 100%
-                </p>
-            </div>
+    <main class="max-w-5xl mx-auto px-4 mt-8 space-y-8">
+        <div class="text-center max-w-xl mx-auto mb-6">
+            <span class="text-xs font-bold text-orange-600 bg-orange-100 px-3 py-1 rounded-full">Laboratory & Analytics</span>
+            <h2 class="text-3xl font-bold text-gray-800 mt-3">ผลการวิเคราะห์ทางห้องปฏิบัติการ</h2>
+            <p class="text-xs text-gray-500 mt-1">ยืนยันคุณภาพด้วยผลการทดสอบประสิทธิภาพการยับยั้งเชื้อและการสำรวจความพึงพอใจ</p>
         </div>
 
-        <!-- INFOGRAPHIC Overview -->
-        <section class="bg-white p-6 md:p-8 rounded-3xl border border-orange-200 shadow-md">
-            <div class="text-center max-w-2xl mx-auto mb-8">
-                <span class="bg-orange-100 text-orange-800 text-xs md:text-sm font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Infographic Overview</span>
-                <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800 mt-2">ภาพรวมขั้นตอนกระบวนการผลิตแบบหมุนเวียน</h3>
-                <p class="text-gray-600 text-sm md:text-base mt-1">(Closed-Loop Process)</p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 relative">
-                <div class="bg-gradient-to-b from-orange-50 to-white p-5 rounded-2xl border-2 border-orange-200 flex flex-col items-center text-center relative shadow-sm hover:border-orange-400 transition">
-                    <div class="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-extrabold text-xl shadow mb-3">1</div>
-                    <div class="text-4xl mb-2">🧼</div>
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg">ล้าง & เตรียม</h4>
-                    <p class="text-xs md:text-sm text-gray-600 mt-1 font-medium">คัดสรรส้มสด ขจัดสารตกค้างด้วยน้ำเกลือ</p>
-                </div>
-
-                <div class="bg-gradient-to-b from-orange-50 to-white p-5 rounded-2xl border-2 border-orange-200 flex flex-col items-center text-center relative shadow-sm hover:border-orange-400 transition">
-                    <div class="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-extrabold text-xl shadow mb-3">2</div>
-                    <div class="text-4xl mb-2">♨️</div>
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg">ต้มสกัดสาร</h4>
-                    <p class="text-xs md:text-sm text-gray-600 mt-1 font-medium">สกัด Limonene & Vit C ที่ 80-90°C</p>
-                </div>
-
-                <div class="bg-gradient-to-b from-orange-50 to-white p-5 rounded-2xl border-2 border-orange-200 flex flex-col items-center text-center relative shadow-sm hover:border-orange-400 transition">
-                    <div class="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-extrabold text-xl shadow mb-3">3</div>
-                    <div class="text-4xl mb-2">🧪</div>
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg">กวนเบสหัวเชื้อ</h4>
-                    <p class="text-xs md:text-sm text-gray-600 mt-1 font-medium">ผสม N70 กับผงข้น กวนวนทางเดียวกัน</p>
-                </div>
-
-                <div class="bg-gradient-to-b from-orange-50 to-white p-5 rounded-2xl border-2 border-orange-200 flex flex-col items-center text-center relative shadow-sm hover:border-orange-400 transition">
-                    <div class="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-extrabold text-xl shadow mb-3">4</div>
-                    <div class="text-4xl mb-2">💧</div>
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg">ผสมสารบำรุง</h4>
-                    <p class="text-xs md:text-sm text-gray-600 mt-1 font-medium">เติมน้ำสกัดส้ม + กลีเซอรีนเพิ่มความชุ่มชื้น</p>
-                </div>
-
-                <div class="bg-gradient-to-b from-green-50 to-white p-5 rounded-2xl border-2 border-green-300 flex flex-col items-center text-center relative shadow-sm hover:border-green-500 transition">
-                    <div class="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-extrabold text-xl shadow mb-3">5</div>
-                    <div class="text-4xl mb-2">✨</div>
-                    <h4 class="font-bold text-gray-800 text-base md:text-lg">พักสบู่ & ตรวจ pH</h4>
-                    <p class="text-xs md:text-sm text-gray-600 mt-1 font-medium">พักทิ้งไว้ 24 ชม. ตรวจ pH 5.5 ก่อนบรรจุ</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Detailed Steps -->
-        <section class="space-y-10">
-
-            <!-- STEP 1 -->
-            <div class="process-card bg-white rounded-3xl border border-orange-200 shadow-md overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-0">
-                <div class="md:col-span-5 bg-orange-50 flex items-center justify-center p-4 border-b md:border-b-0 md:border-r border-orange-100 img-container min-h-[250px]">
-                    <img src="images/ล้าง.jpg" alt="การคัดเลือกและทำความสะอาดเปลือกส้ม" class="rounded-2xl shadow-sm object-cover w-full h-full">
-                </div>
-                <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-center">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="bg-orange-600 text-white text-sm font-extrabold px-4 py-1 rounded-full">STEP 1</span>
-                        <span class="text-sm font-bold text-orange-600">การคัดเลือกและทำความสะอาดเปลือกส้ม</span>
-                    </div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">ขจัดสิ่งปนเปื้อนและคัดสรรวัตถุดิบคุณภาพ</h3>
-                    <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-5">
-                        เริ่มต้นจากการคัดเลือกเปลือกส้มสดไร้รอยเน่าเสียจากกลุ่มเกษตรกรท้องถิ่น นำมาล้างทำความสะอาดด้วย (น้ำเกลือ) เป็นเวลา 15 นาที เพื่อขจัดคราบสิ่งสกปรกและยากำจัดศัตรูพืชที่ติดอยู่บนผิวเปลือกส้มออกให้หมด จากนั้นล้างด้วยน้ำสะอาดสะพัดให้แห้งสะเด็ดน้ำ
-                    </p>
-                    <div class="bg-orange-50 p-4 rounded-2xl border border-orange-200 text-sm md:text-base text-gray-800 font-medium">
-                        📌 <strong class="text-orange-900">จุดควบคุม QC:</strong> เปลือกส้มต้องไม่มีราสีดำหรือกลิ่นเน่าบูด หากพบจะแยกออกทันทีเพื่อไม่ให้กระทบต่ออายุการเก็บรักษาของสบู่
-                    </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-orange-100">
+                <h4 class="font-bold text-gray-800 text-base mb-4">🧪 ประสิทธิภาพการยับยั้งแบคทีเรีย (%)</h4>
+                <div class="chart-container">
+                    <canvas id="bacterialChart"></canvas>
                 </div>
             </div>
 
-            <!-- STEP 2 -->
-            <div class="process-card bg-white rounded-3xl border border-orange-200 shadow-md overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-0">
-                <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-center order-2 md:order-1">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="bg-orange-600 text-white text-sm font-extrabold px-4 py-1 rounded-full">STEP 2</span>
-                        <span class="text-sm font-bold text-orange-600">การต้มสกัดสารสำคัญ (Thermal Extraction)</span>
-                    </div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">ดึงสาร d-Limonene (ต้มเปลือกส้ม)</h3>
-                    <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-5">
-                        หั่นเปลือกส้มเป็นชิ้นเล็กๆ
-                        แล้วนำไปต้มกับน้ำสะอาดต้มสุกที่อุณหภูมิควบคุม (80 - 90 องศาเซลเซียส) 
-                        เป็นเวลา 30-45 นาที เพื่อให้ความร้อนดึงสารสำคัญอย่าง (d-Limonene) และ (Vitamin C) 
-                        ออกมาสู่น้ำต้ม และนำมากรองด้วยผ้าขาวบางและ ได้น้ำต้มเปลือกส้มสีเหลือง
-                    </p>
-                    <div class="bg-orange-50 p-4 rounded-2xl border border-orange-200 text-sm md:text-base text-gray-800 font-medium">
-                        📌 <strong class="text-orange-900">เทคนิคสำคัญ:</strong> ต้องตั้งพักน้ำต้มเปลือกส้มให้เย็นลงจนถึงอุณหภูมิห้องก่อนนำไปผสม เพื่อป้องกันไม่ให้ความร้อนทำลายโครงสร้างเบสสบู่
-                    </div>
-                </div>
-                <div class="md:col-span-5 bg-orange-50 flex items-center justify-center p-4 border-b md:border-b-0 md:border-l border-orange-100 img-container min-h-[250px] order-1 md:order-2">
-                    <img src="images/65614.jpg" alt="การต้มสกัดสารสำคัญ" class="rounded-2xl shadow-sm object-cover w-full h-full">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-orange-100">
+                <h4 class="font-bold text-gray-800 text-base mb-4">⭐ สรุปผลความพึงพอใจของผู้ใช้งาน (100 คน)</h4>
+                <div class="chart-container">
+                    <canvas id="satisfactionChart"></canvas>
                 </div>
             </div>
-
-            <!-- STEP 3 -->
-            <div class="process-card bg-white rounded-3xl border border-orange-200 shadow-md overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-0">
-                <div class="md:col-span-5 bg-orange-50 flex items-center justify-center p-4 border-b md:border-b-0 md:border-r border-orange-100 img-container min-h-[250px]">
-                    <img src="images/5.jpg" alt="การกวนทำปฏิกิริยาเบสสบู่" class="rounded-2xl shadow-sm object-cover w-full h-full">
-                </div>
-                <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-center">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="bg-orange-600 text-white text-sm font-extrabold px-4 py-1 rounded-full">STEP 3</span>
-                        <span class="text-sm font-bold text-orange-600">การกวนทำปฏิกิริยาเบสสบู่ (Base Mixing)</span>
-                    </div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">ผสมหัวเชื้อ N70 เข้ากับผงข้นบริสุทธิ์</h3>
-                    <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-5">
-                        ตักหัวเชื้อ N70 ปริมาณ 250 g ใส่ลงในภาชนะผสม จากนั้นทยอยใส่ผงข้น 50 g ลงไปอย่างช้าๆ ใช้ไม้พายกวนผสมวนไปใน <strong>(ทิศทางเดียวกันเท่านั้น)</strong> จนกระทั่งเนื้อหัวเชื้อเริ่มเปลี่ยนเป็นสีขาวข้นเนียน
-                    </p>
-                    </p>
-                    <div class="bg-orange-50 p-4 rounded-2xl border border-orange-200 text-sm md:text-base text-gray-800 font-medium">
-                        📌 <strong class="text-orange-900">ข้อระวัง:</strong> การกวนสลับทิศทางไปมาจะทำให้เนื้อสบู่เหลวแยกชั้นและเกิดฟองมากเกินไปจนทำให้สบู่ขุ่น
-                    </div>
-                </div>
-            </div>
-
-            <!-- STEP 4 -->
-            <div class="process-card bg-white rounded-3xl border border-orange-200 shadow-md overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-0">
-                <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-center order-2 md:order-1">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="bg-orange-600 text-white text-sm font-extrabold px-4 py-1 rounded-full">STEP 4</span>
-                        <span class="text-sm font-bold text-orange-600">การรวมส่วนผสมและปรับความหนืด</span>
-                    </div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">เติมน้ำสกัดเปลือกส้มและกลีเซอรีนพืช</h3>
-                    <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-5">
-                        เทน้ำสกัดเปลือกส้มที่เย็นแล้วปริมาณ 500 g ค่อยๆ ใส่ลงในภาชนะผสมทีละน้อย พร้อมกวนอย่างเบามือ จากนั้นเติมกลีเซอรีนพืช 30 g, ผงฟอง 20 g และน้ำสะอาดต้มสุกส่วนที่เหลือ 150 g กวนต่อจนส่วนผสมทั้งหมดละลายเข้ากันดี
-                    </p>
-                    <div class="bg-orange-50 p-4 rounded-2xl border border-orange-200 text-sm md:text-base text-gray-800 font-medium">
-                        📌 <strong class="text-orange-900">อัตราส่วนทองคำ:</strong> น้ำต้มสกัดเปลือกส้ม 500 g ต่อ เบสสบู่ N70 ช่วยให้สบู่มีกลิ่นหอมส้มธรรมชาติโดยไม่ต้องใส่สารแต่งกลิ่นเคมี
-                    </div>
-                </div>
-                <div class="md:col-span-5 bg-orange-50 flex items-center justify-center p-4 border-b md:border-b-0 md:border-l border-orange-100 img-container min-h-[250px] order-1 md:order-2">
-                    <img src="images/1.jpg" alt="การรวมส่วนผสมและปรับความหนืด" class="rounded-2xl shadow-sm object-cover w-full h-full">
-                </div>
-            </div>
-
-            <!-- STEP 5 -->
-            <div class="process-card bg-green-50/70 rounded-3xl border border-green-300 shadow-md overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-0">
-                <div class="md:col-span-5 bg-green-100/60 flex items-center justify-center p-4 border-b md:border-b-0 md:border-r border-green-200 img-container min-h-[250px]">
-                    <img src="images/ส้ม.png" alt="การพักไล่ฟองและบรรจุ" class="rounded-2xl shadow-sm object-cover w-full h-full">
-                </div>
-                <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-center">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="bg-green-600 text-white text-sm font-extrabold px-4 py-1 rounded-full">STEP 5</span>
-                        <span class="text-sm font-bold text-green-700">การพักไล่ฟอง ตรวจสอบคุณภาพ (QC) และบรรจุ</span>
-                    </div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">พักให้สบู่ใส ตรวจวัดค่า pH 5.5 ก่อนบรรจุ</h3>
-                    <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-5">
-                        ปิดฝาภาชนะผสมให้มิดชิด พักทิ้งไว้ประมาณ 12 - 24 ชั่วโมง เพื่อให้ฟองอากาศยุบตัวจนหมด เนื้อสบู่จะกลายเป็นสีส้มอำพันใส สุ่มทดสอบค่า pH ให้ได้ช่วงสมดุลผิว 5.5 ก่อนนำไปบรรจุลงในขวดปั๊มเพื่อใช้งาน
-                    </p>
-                    <div class="bg-white p-4 rounded-2xl border border-green-300 text-sm md:text-base text-gray-800 font-medium">
-                        ✅ <strong class="text-green-800">มาตรฐานความปลอดภัย:</strong> ควรตรวจเช็คค่าPHให้ดีอยู่เสมอ หากค่า pH สูงเกินไปจะทำให้สบู่ระคายเคืองผิวได้
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- CTA Bottom Banner -->
-        <div class="bg-amber-100 border-2 border-amber-300 rounded-3xl p-8 text-center space-y-4 shadow-sm">
-            <h4 class="font-extrabold text-gray-900 text-xl md:text-2xl">ต้องการดูสูตรคำนวณสัดส่วนวัตถุดิบเพื่อทำใช้เอง?</h4>
-            <p class="text-base md:text-lg text-gray-700 max-w-2xl mx-auto font-medium">เปิดดูคู่มือขั้นตอนการทำและอัตราส่วนระบุหน่วยกรัม (g) อย่างละเอียดได้ที่นี่</p>
-            <a href="diy.html" class="inline-block bg-orange-600 hover:bg-orange-700 text-white text-base font-bold px-8 py-3.5 rounded-2xl transition shadow-md hover:shadow-lg">
-                เปิดดูคู่มือการทำแบบละเอียด →
-            </a>
         </div>
-
     </main>
 
+    <script>
+        // Init Lab Charts
+        const ctxBar = document.getElementById('bacterialChart').getContext('2d');
+        new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: ['สบู่ทั่วไป', 'สารสกัดเปลือกส้ม 5%', 'Citrus Glow Soap'],
+                datasets: [{
+                    label: 'การยับยั้งแบคทีเรีย (%)',
+                    data: [65.0, 88.5, 99.8],
+                    backgroundColor: ['#CBD5E1', '#FDBA74', '#EA580C'],
+                    borderRadius: 6
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+        });
+
+        const ctxDoughnut = document.getElementById('satisfactionChart').getContext('2d');
+        new Chart(ctxDoughnut, {
+            type: 'doughnut',
+            data: {
+                labels: ['พึงพอใจมากที่สุด', 'พึงพอใจ', 'ปานกลาง'],
+                datasets: [{
+                    data: [78, 17, 5],
+                    backgroundColor: ['#16A34A', '#F59E0B', '#CBD5E1']
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+    </script>
 </body>
 </html>
